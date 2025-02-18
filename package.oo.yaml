@@ -7,3 +7,8 @@ scripts:
     pip install -r requirements.txt
 dependencies:
   {}
+icon: ./icon.png
+name: v2ex-lottery
+description: V2EX Lottery
+displayName: V2EX Lottery
+repository: https://github.com/BlackHole1/oomol-v2ex-lottery
