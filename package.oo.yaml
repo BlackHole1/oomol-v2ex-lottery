@@ -1,0 +1,9 @@
+version: 0.0.1
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: pip install pandas
+  bootstrap: |
+    npm install
+    pip install -r requirements.txt
+dependencies:
+  {}

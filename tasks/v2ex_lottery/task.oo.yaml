@@ -1,0 +1,39 @@
+executor:
+  name: nodejs
+  options:
+    entry: main.ts
+inputs_def:
+  - handle: topicID
+    json_schema:
+      type: integer
+      minimum: 1
+      ui:options:
+        step: 1
+  - handle: excludes
+    json_schema:
+      type: array
+      items:
+        type: string
+    value:
+      []
+    nullable: true
+  - handle: count
+    json_schema:
+      type: integer
+      ui:options:
+        step: 1
+      minimum: 1
+    value: 3
+  - handle: token
+    json_schema:
+      contentMediaType: oomol/secret
+      type: string
+    nullable: false
+outputs_def:
+  - handle: output
+    json_schema:
+      type: array
+      items:
+        type: string
+title: V2EX Lottery
+timeout: 12

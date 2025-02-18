@@ -1,0 +1,45 @@
+nodes:
+  - task: self::v2ex_lottery
+    title: "V2EX Lottery #1"
+    node_id: v2ex_lottery#1
+    inputs_from:
+      - handle: topicID
+        value: 0
+        from_node:
+          - node_id: +value#1
+            output_handle: id
+      - handle: excludes
+        value:
+          - ""
+        from_node:
+          - node_id: +value#1
+            output_handle: excludes
+      - handle: count
+        value: 30
+        from_node:
+          - node_id: +value#1
+            output_handle: count
+      - handle: token
+        value: ${{OO_SECRET:Custom,V2EX,token}}
+  - values:
+      - handle: id
+        json_schema:
+          type: integer
+          minimum: 1
+        value: 1
+      - handle: excludes
+        json_schema:
+          type: array
+          items:
+            type: string
+        value:
+          - Livid
+      - handle: count
+        json_schema:
+          type: integer
+          minimum: 1
+          ui:options:
+            step: 1
+        value: 3
+    title: "Value #1"
+    node_id: +value#1

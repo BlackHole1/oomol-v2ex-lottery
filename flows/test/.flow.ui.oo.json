@@ -1,0 +1,27 @@
+{
+  "nodes": {
+    "v2ex_lottery#1": {
+      "contentWidth": 439.6439929540163,
+      "rfNode": {
+        "position": {
+          "x": 240,
+          "y": 30
+        }
+      },
+      "sections": {
+        "preview": {
+          "previewHeight": 245.6449837449589
+        }
+      }
+    },
+    "+value#1": {
+      "contentWidth": 415,
+      "rfNode": {
+        "position": {
+          "x": -267.7658562367864,
+          "y": 30
+        }
+      }
+    }
+  }
+}
