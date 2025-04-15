@@ -9,10 +9,10 @@ type Inputs = {
   excludes: string[] | null;
   count: number;
   token: string;
-}
+};
 type Outputs = {
   output: string[];
-}
+};
 //#endregion
 
 export default async function(
